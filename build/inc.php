@@ -9,7 +9,8 @@
 	function emoji_docomo_to_unified(	$text){ return emoji_convert($text, 'docomo_to_unified'); }
 	function emoji_kddi_to_unified(		$text){ return emoji_convert($text, 'kddi_to_unified'); }
 	function emoji_softbank_to_unified(	$text){ return emoji_convert($text, 'softbank_to_unified'); }
-	function emoji_google_to_unified(	$text){ return emoji_convert($text, 'google_to_unified'); }
+    function emoji_google_to_unified(   $text){ return emoji_convert($text, 'google_to_unified'); }
+    function emoji_non_qualified_to_unified(   $text){ return emoji_convert($text, 'non_qualified_to_unified'); }
 
 
 	#
@@ -19,7 +20,7 @@
 	function emoji_unified_to_docomo(	$text){ return emoji_convert($text, 'unified_to_docomo'); }
 	function emoji_unified_to_kddi(		$text){ return emoji_convert($text, 'unified_to_kddi'); }
 	function emoji_unified_to_softbank(	$text){ return emoji_convert($text, 'unified_to_softbank'); }
-	function emoji_unified_to_google(	$text){ return emoji_convert($text, 'unified_to_google'); }
+	function emoji_unified_to_no_qualified (	$text){ return emoji_convert($text, 'unified_to_no_qualified'); }
 
 
 	#
@@ -48,6 +49,11 @@
 
 		return str_replace(array_keys($GLOBALS['emoji_maps'][$map]), $GLOBALS['emoji_maps'][$map], $text);
 	}
+
+    function emoji_remove($text, $map){
+
+        return str_replace(array_keys($GLOBALS['emoji_maps'][$map]), '', $text);
+    }
 
 	function emoji_get_name($unified_cp){
 

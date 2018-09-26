@@ -18,12 +18,14 @@
 	$maps["unified_to_docomo"]	= make_mapping($catalog, 'docomo');
 	$maps["unified_to_kddi"]	= make_mapping($catalog, 'au');
 	$maps["unified_to_softbank"]	= make_mapping($catalog, 'softbank');
-	$maps["unified_to_google"]	= make_mapping($catalog, 'google');
+    $maps["unified_to_google"]  = make_mapping($catalog, 'google');
+    $maps["unified_to_non_qualified"]  = make_mapping($catalog, 'non_qualified');
 
 	$maps["docomo_to_unified"]	= make_mapping_flip($catalog, 'docomo');
 	$maps["kddi_to_unified"]	= make_mapping_flip($catalog, 'au');
 	$maps["softbank_to_unified"]	= make_mapping_flip($catalog, 'softbank');
-	$maps["google_to_unified"]	= make_mapping_flip($catalog, 'google');
+    $maps["google_to_unified"]  = make_mapping_flip($catalog, 'google');
+    $maps["non_qualified_to_unified"]  = make_mapping_flip($catalog, 'non_qualified');
 
 	$maps["unified_to_html"]	= make_html_map($catalog);
 	$maps["unified_rx"]		= make_html_rx($maps["unified_to_html"]);
